@@ -1,19 +1,52 @@
 {
-  "posts": [
+  "menuItems": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "burger1",
+      "image": "/BunDropImages/burger-1.png",
+      "price": 80
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "name": "burger2",
+      "image": "/BunDropImages/burger-2.png",
+      "price": 75
+    },
+    {
+      "id": 3,
+      "name": "burger3",
+      "image": "/BunDropImages/burger-3.png",
+      "price": 70
+    },
+    {
+      "id": 4,
+      "name": "burger4",
+      "image": "/BunDropImages/burger-4.png",
+      "price": 65
+    },
+    {
+      "id": 5,
+      "name": "burger5",
+      "image": "/BunDropImages/burger-5.png",
+      "price": 78
+    },
+    {
+      "id": 6,
+      "name": "burger6",
+      "image": "/BunDropImages/burger-6.png",
+      "price": 80
+    },
+    {
+      "id": 7,
+      "name": "burger7",
+      "image": "/BunDropImages/burger-7.png",
+      "price": 80
+    },
+    {
+      "id": 8,
+      "name": "burger8",
+      "image": "/BunDropImages/burger-8.png",
+      "price": 75
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
