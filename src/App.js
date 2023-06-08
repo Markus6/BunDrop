@@ -9,7 +9,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div style={{ display: "flex", flexFlow: "column", height: "100vh" }}>
+    <div
+      style={{
+        display: "flex",
+        flexFlow: "column",
+        minHeight: "100vh",
+        position: "relative",
+      }}
+    >
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

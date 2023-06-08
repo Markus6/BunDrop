@@ -5,7 +5,6 @@ function Footer() {
 }
 
 const footerStyle = {
-  zIndex: "1",
   display: "flex",
   alignItems: "center",
   fontSize: 20,
@@ -13,6 +12,8 @@ const footerStyle = {
   color: "#FFA07A",
   background: "#212121",
   height: "100px",
+  position: "absolute",
+  bottom: "0px",
   width: "100%",
 };
 

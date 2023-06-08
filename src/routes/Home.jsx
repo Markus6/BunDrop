@@ -18,7 +18,6 @@ function Home() {
 }
 
 const btnMenu = {
-  zIndex: "10",
   display: "flex",
   fontSize: "40px",
   color: "#FFA07A",
@@ -28,9 +27,10 @@ const btnMenu = {
   height: "100px",
   width: "300px",
   maxWidth: "60vw",
-  maxHeight: "40vh",
+  maxHeight: "10vh",
   justifyContent: "center",
   alignItems: "center",
+  margin: "50px",
   marginBottom: "150px",
 };
 
@@ -38,6 +38,7 @@ const logo = {
   margin: "auto",
   maxWidth: "60vw",
   maxHeight: "40vh",
+  margin: "50px",
 };
 
 const foregroundStyle = {
@@ -45,23 +46,21 @@ const foregroundStyle = {
   flexFlow: "column",
   justifyContent: "center",
   alignItems: "center",
-  width: "100%",
-  height: "100%",
-  position: "absolute",
-  top: "0",
-  left: "0",
+  marginBottom: "100px",
 };
 
 const backgroundStyle = {
+  zIndex: "-1",
+  position: "fixed",
+  top: "0",
+  left: "0",
   height: "100%",
+  width: "100%",
   background:
     "linear-gradient(0deg, rgba(255,160,122,1) 0%, rgba(0,0,0,0) 100%), url(/BunDropImages/burger-6.png)",
   backgroundSize: "cover",
   backgroundPosition: "center",
   overflow: "hidden",
-  fontSize: 50,
-  color: "red",
-  textAlign: "center",
   filter: "blur(5px)",
 };
 
