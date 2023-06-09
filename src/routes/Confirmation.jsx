@@ -1,47 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Order() {
-  function removeItem(id) {
-    localStorage.removeItem(id);
-    document.getElementById("item" + id).remove();
-  }
-
-  function orderList() {
-    let orderString = [];
-    for (let i = 1; i < 16; i++) {
-      try {
-        console.log(JSON.parse(localStorage.getItem(i)));
-        orderString.push(
-          <div id={"item" + i} key={i} style={{ display: "flex" }}>
-            <p>
-              {JSON.parse(localStorage.getItem(i)).name} - price:{" "}
-              {JSON.parse(localStorage.getItem(i)).price} kr - number:{" "}
-              {JSON.parse(localStorage.getItem(i)).number}
-            </p>
-            <button style={btnRemove} onClick={() => removeItem(i)}>
-              X
-            </button>
-          </div>
-        );
-      } catch (error) {}
-    }
-    console.log(orderString);
-    return orderString;
-  }
-
+function Confirmation() {
   return (
     <div style={{ height: "100%", fontFamily: "PT Sans Narrow" }}>
       <div style={backgroundStyle}></div>
       <div style={foregroundStyle}>
         <div style={box}>
-          <p style={textStyle}>Order</p>
-          <div style={orderText} id="order">
-            {orderList()}
-          </div>
-          <Link style={btnOrder} to="/payment">
+          <h1 style={{ margin: "40px", fontSize: "40px" }}>Confirmation</h1>
+          <p style={textStyle}>
+            Order was succesful and will arrive in around{" "}
+            {Math.floor(Math.random() * 40)} min
+          </p>
+          <Link style={btnOrder} to="/">
             <div>
-              <p>ORDER</p>
+              <p>HOME</p>
             </div>
           </Link>
         </div>
@@ -49,22 +22,6 @@ function Order() {
     </div>
   );
 }
-
-const btnRemove = {
-  background: "#FFA07A",
-  color: "#212121",
-  fontWeight: "bold",
-  fontSize: "40px",
-  margin: "0px",
-  marginLeft: "10px",
-  cursor: "pointer",
-};
-
-const orderText = {
-  margin: "40px",
-  fontSize: "18px",
-  color: "#FFA07A",
-};
 
 const btnOrder = {
   display: "flex",
@@ -86,7 +43,7 @@ const btnOrder = {
 };
 
 const textStyle = {
-  fontSize: "40px",
+  fontSize: "30px",
   margin: "40px",
 };
 
@@ -120,4 +77,4 @@ const backgroundStyle = {
   overflow: "hidden",
   filter: "blur(5px)",
 };
-export default Order;
+export default Confirmation;

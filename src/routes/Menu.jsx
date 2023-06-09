@@ -16,7 +16,13 @@ function Menu() {
       <div style={backgroundStyle}></div>
       <div style={foregroundStyle}>
         {menuItems.map((m) => (
-          <MenuItem key={m.id} name={m.name} image={m.image} price={m.price} />
+          <MenuItem
+            key={m.id}
+            name={m.name}
+            image={m.image}
+            price={m.price}
+            id={m.id}
+          />
         ))}
       </div>
       <Link style={btnOrder} to="/order">

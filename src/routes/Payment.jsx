@@ -17,49 +17,51 @@ function Payment() {
   console.log(firstName + lastName);
 
   function handleSubmit() {
-    console.log(firstName + lastName);
+    if (
+      firstName != "" &&
+      lastName != "" &&
+      zipCode != "" &&
+      city != "" &&
+      country != "" &&
+      address != "" &&
+      email != "" &&
+      creditCardNumber != "" &&
+      month != "" &&
+      year != "" &&
+      cvc != ""
+    )
+      window.location.href = "/confirmation";
   }
-
   function handleFirstNameChange(e) {
     firstName = e.target.value;
   }
-
   function handleLastNameChange(e) {
     lastName = e.target.value;
   }
-
   function handleZipCodeChange(e) {
     zipCode = e.target.value;
   }
-
   function handleCityChange(e) {
     city = e.target.value;
   }
-
   function handleCountryChange(e) {
     country = e.target.value;
   }
-
   function handleAddressChange(e) {
     address = e.target.value;
   }
-
   function handleEmailChange(e) {
     email = e.target.value;
   }
-
   function handleCardNumberChange(e) {
     creditCardNumber = e.target.value;
   }
-
   function handleMonthChange(e) {
     month = e.target.value;
   }
-
   function handleYearChange(e) {
     year = e.target.value;
   }
-
   function handleCVCChange(e) {
     cvc = e.target.value;
   }
@@ -70,81 +72,104 @@ function Payment() {
       <div style={foregroundStyle}>
         <div style={box}>
           <p style={textStyle}>Payment</p>
-          <form>
+          <form style={{ margin: "40px" }}>
             <label>
+              <p style={{ fontSize: "40px" }}>Customer info</p>
               <input
+                style={inputStyle}
                 type="text"
                 placeholder="First name"
                 onChange={handleFirstNameChange}
               />
               <input
+                style={inputStyle}
                 type="text"
-                placeholder="First name"
+                placeholder="Last name"
                 onChange={handleLastNameChange}
               />
               <input
+                style={inputStyle}
                 type="text"
                 placeholder="ZIP code"
                 onChange={handleZipCodeChange}
               />
               <input
+                style={inputStyle}
                 type="text"
                 placeholder="City"
                 onChange={handleCityChange}
               />
               <input
+                style={inputStyle}
                 type="text"
                 placeholder="Country"
                 onChange={handleCountryChange}
               />
               <input
+                style={inputStyle}
                 type="text"
                 placeholder="Address"
                 onChange={handleAddressChange}
               />
               <input
+                style={inputStyle}
                 type="text"
                 placeholder="Email"
                 onChange={handleEmailChange}
               />
+              <p style={{ fontSize: "40px" }}>Payment info</p>
               <input
+                style={inputStyle}
                 type="text"
                 placeholder="Credit Card Number"
                 onChange={handleCardNumberChange}
               />
               <input
+                style={inputStyle}
                 type="text"
                 placeholder="Month"
                 onChange={handleMonthChange}
               />
               <input
+                style={inputStyle}
                 type="text"
                 placeholder="Year"
                 onChange={handleYearChange}
               />
-              <input type="text" placeholder="CVC" onChange={handleCVCChange} />
+              <input
+                style={inputStyle}
+                type="text"
+                placeholder="CVC"
+                onChange={handleCVCChange}
+              />
             </label>
-            <input type="button" value="PAY" onClick={handleSubmit} />
+            <input
+              style={btnPay}
+              type="button"
+              value="PAY"
+              onClick={handleSubmit}
+            />
           </form>
-          <Link style={btnOrder} to="/">
-            <div>
-              <p>HOME</p>
-            </div>
-          </Link>
         </div>
       </div>
     </div>
   );
 }
 
-const btnOrder = {
+const inputStyle = {
+  margin: "5px",
+  padding: "5px",
+  height: "20px",
+  borderRadius: "20px",
+};
+
+const btnPay = {
   display: "flex",
-  fontSize: "40px",
+  fontSize: "30px",
   color: "#212121",
   textDecoration: "none",
   background: "#FFA07A",
   borderRadius: "40px",
-  height: "800px",
   width: "200px",
   maxWidth: "60vw",
   maxHeight: "10vh",
@@ -153,12 +178,14 @@ const btnOrder = {
   margin: "auto",
   padding: "20px",
   marginBottom: "50px",
+  marginTop: "50px",
   fontWeight: "bold",
 };
 
 const textStyle = {
-  fontSize: "40px",
+  fontSize: "50px",
   margin: "40px",
+  fontWeight: "bold",
 };
 
 const box = {

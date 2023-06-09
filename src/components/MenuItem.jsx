@@ -1,13 +1,27 @@
 import React from "react";
 
-function MenuItem({ name, image, price }) {
+function MenuItem({ name, image, price, id }) {
+  let number = 0;
+
+  function handleClick() {
+    number++;
+    document.getElementById(id).innerText = "number: " + number;
+    localStorage.setItem(
+      id,
+      JSON.stringify({ name: name, price: price, id: id, number: number })
+    );
+  }
+
   return (
-    <div style={menuItem}>
+    <div style={menuItem} onClick={handleClick}>
       <img style={menuImage} src={image} alt="image" />
       <div style={{ display: "flex" }}>
         <p style={textStyle}>{name}</p>
         <p style={textStyle}>Price: {price} kr</p>
       </div>
+      <p id={id} style={textStyle}>
+        number: {number}
+      </p>
     </div>
   );
 }
@@ -20,6 +34,7 @@ const textStyle = {
 };
 
 const menuItem = {
+  cursor: "pointer",
   margin: "20px",
   padding: "20px",
   background: "#212121",
