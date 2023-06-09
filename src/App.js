@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./routes/Home";
 import NotFound from "./routes/NotFound";
 import Menu from "./routes/Menu";
+import Order from "./routes/Order";
+import Payment from "./routes/Payment";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -22,6 +24,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
       <Footer />
     </div>

@@ -1,44 +1,54 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Order() {
   return (
     <div style={{ height: "100%", fontFamily: "PT Sans Narrow" }}>
       <div style={backgroundStyle}></div>
       <div style={foregroundStyle}>
-        <img style={logo} src="/BunDropImages/logo black.png" alt="image" />{" "}
-        <Link style={btnMenu} to="/menu">
-          <div>
-            <p>MENU</p>
-          </div>
-        </Link>
+        <div style={box}>
+          <p style={textStyle}>Order</p>
+          <Link style={btnOrder} to="/payment">
+            <div>
+              <p>ORDER</p>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   );
 }
 
-const btnMenu = {
+const btnOrder = {
   display: "flex",
   fontSize: "40px",
-  color: "#FFA07A",
+  color: "#212121",
   textDecoration: "none",
-  background: "#212121",
-  borderRadius: "20px",
-  height: "100px",
-  width: "300px",
+  background: "#FFA07A",
+  borderRadius: "40px",
+  height: "800px",
+  width: "200px",
   maxWidth: "60vw",
   maxHeight: "10vh",
   justifyContent: "center",
   alignItems: "center",
-  margin: "50px",
+  margin: "auto",
+  padding: "20px",
   marginBottom: "50px",
+  fontWeight: "bold",
 };
 
-const logo = {
-  margin: "auto",
-  maxWidth: "60vw",
-  maxHeight: "40vh",
-  margin: "50px",
+const textStyle = {
+  fontSize: "40px",
+  margin: "40px",
+};
+
+const box = {
+  background: "#212121",
+  color: "#FFA07A",
+  borderRadius: "30px",
+  width: "80%",
+  margin: "40px",
 };
 
 const foregroundStyle = {
@@ -63,5 +73,4 @@ const backgroundStyle = {
   overflow: "hidden",
   filter: "blur(5px)",
 };
-
-export default Home;
+export default Order;

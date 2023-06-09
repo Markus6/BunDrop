@@ -2,50 +2,74 @@
   "menuItems": [
     {
       "id": 1,
-      "name": "burger1",
-      "image": "/BunDropImages/burger-1.png",
+      "name": "Burger1",
+      "image": "/BunDropImages/burger-3.png",
       "price": 80
     },
     {
       "id": 2,
-      "name": "burger2",
-      "image": "/BunDropImages/burger-2.png",
+      "name": "Burger2",
+      "image": "/BunDropImages/burger-4.png",
       "price": 75
     },
     {
       "id": 3,
-      "name": "burger3",
-      "image": "/BunDropImages/burger-3.png",
+      "name": "Burger3",
+      "image": "/BunDropImages/burger-5.png",
       "price": 70
     },
     {
       "id": 4,
-      "name": "burger4",
-      "image": "/BunDropImages/burger-4.png",
+      "name": "Burger4",
+      "image": "/BunDropImages/burger-8.png",
       "price": 65
     },
     {
       "id": 5,
-      "name": "burger5",
-      "image": "/BunDropImages/burger-5.png",
+      "name": "Burger5",
+      "image": "/BunDropImages/burger-9.png",
       "price": 78
     },
     {
       "id": 6,
-      "name": "burger6",
-      "image": "/BunDropImages/burger-6.png",
+      "name": "Fries 1",
+      "image": "/BunDropImages/fries-1.png",
       "price": 80
     },
     {
       "id": 7,
-      "name": "burger7",
-      "image": "/BunDropImages/burger-7.png",
+      "name": "Fries 2",
+      "image": "/BunDropImages/fries-2.png",
       "price": 80
     },
     {
       "id": 8,
-      "name": "burger8",
-      "image": "/BunDropImages/burger-8.png",
+      "name": "Milkshake",
+      "image": "/BunDropImages/milkshake-1.png",
+      "price": 75
+    },
+    {
+      "id": 9,
+      "name": "Soda 1",
+      "image": "/BunDropImages/soda-1.png",
+      "price": 75
+    },
+    {
+      "id": 10,
+      "name": "Soda 2",
+      "image": "/BunDropImages/soda-2.png",
+      "price": 75
+    },
+    {
+      "id": 11,
+      "name": "Soda 3",
+      "image": "/BunDropImages/soda-3.png",
+      "price": 75
+    },
+    {
+      "id": 12,
+      "name": "Soda 4",
+      "image": "/BunDropImages/soda-4.png",
       "price": 75
     }
   ]

@@ -16,12 +16,32 @@ function Menu() {
       <div style={backgroundStyle}></div>
       <div style={foregroundStyle}>
         {menuItems.map((m) => (
-          <MenuItem key={m.id} name={m.name} image={m.image} />
+          <MenuItem key={m.id} name={m.name} image={m.image} price={m.price} />
         ))}
       </div>
+      <Link style={btnOrder} to="/order">
+        <div>
+          <p style={{ margin: 0 }}>To Order</p>
+        </div>
+      </Link>
     </div>
   );
 }
+
+const btnOrder = {
+  position: "fixed",
+  top: "10px",
+  right: "10px",
+  zIndex: "1",
+  background: "#FFA07A",
+  display: "flex",
+  fontSize: "40px",
+  color: "#212121",
+  textDecoration: "none",
+  borderRadius: "20px",
+  padding: "10px",
+  border: "solid #212121",
+};
 
 const foregroundStyle = {
   display: "flex",
@@ -29,6 +49,8 @@ const foregroundStyle = {
   overflow: "hidden",
   marginBottom: "100px",
   justifyContent: "center",
+  paddingRight: "0.5%",
+  paddingLeft: "0.5%",
 };
 
 const backgroundStyle = {
