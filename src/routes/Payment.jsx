@@ -13,25 +13,30 @@ function Payment() {
   let month = "";
   let year = "";
   let cvc = "";
+  let phoneNumber = "";
 
   console.log(firstName + lastName);
 
   function handleSubmit() {
     if (
-      firstName != "" &&
-      lastName != "" &&
-      zipCode != "" &&
-      city != "" &&
-      country != "" &&
-      address != "" &&
-      email != "" &&
-      creditCardNumber != "" &&
-      month != "" &&
-      year != "" &&
-      cvc != ""
+      firstName !== "" &&
+      lastName !== "" &&
+      zipCode !== "" &&
+      city !== "" &&
+      country !== "" &&
+      address !== "" &&
+      email !== "" &&
+      creditCardNumber !== "" &&
+      month !== "" &&
+      year !== "" &&
+      cvc !== ""
     )
       window.location.href = "/confirmation";
   }
+  function handleSwishSubmit() {
+    if (phoneNumber !== "") window.location.href = "/confirmation";
+  }
+
   function handleFirstNameChange(e) {
     firstName = e.target.value;
   }
@@ -64,6 +69,9 @@ function Payment() {
   }
   function handleCVCChange(e) {
     cvc = e.target.value;
+  }
+  function handlePhoneChange(e) {
+    phoneNumber = e.target.value;
   }
 
   return (
@@ -118,6 +126,7 @@ function Payment() {
                 onChange={handleEmailChange}
               />
               <p style={{ fontSize: "40px" }}>Payment info</p>
+              <p style={{ fontSize: "30px" }}>Credit card</p>
               <input
                 style={inputStyle}
                 type="text"
@@ -142,13 +151,26 @@ function Payment() {
                 placeholder="CVC"
                 onChange={handleCVCChange}
               />
+              <input
+                style={btnPay}
+                type="button"
+                value="PAY"
+                onClick={handleSubmit}
+              />
+              <p style={{ fontSize: "30px" }}>or swish to: 123456789</p>
+              <input
+                style={inputStyle}
+                type="text"
+                placeholder="Phone number"
+                onChange={handlePhoneChange}
+              />
+              <input
+                style={btnPay}
+                type="button"
+                value="Swish"
+                onClick={handleSwishSubmit}
+              />
             </label>
-            <input
-              style={btnPay}
-              type="button"
-              value="PAY"
-              onClick={handleSubmit}
-            />
           </form>
         </div>
       </div>
